@@ -1,14 +1,8 @@
-//import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cv_website/pages/test_next_page.dart';
 import 'package:cv_website/widgets/homescreen_card.dart';
+import 'package:cv_website/widgets/homescreen_card_reverse.dart';
+import 'package:cv_website/widgets/name_card.dart';
 import 'package:flutter/material.dart';
-
-const colorizeColors = [Colors.purple, Colors.blue, Colors.yellow, Colors.red];
-
-const colorizeTextStyle = TextStyle(
-  fontSize: 50.0,
-  fontWeight: FontWeight.bold,
-); //Need to change the font
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -20,19 +14,24 @@ class LandingPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HomescreenCard(
-              // additionalWidget: [
-              //   CircleAvatar(
-              //     backgroundImage: AssetImage('assets/images/Fahim.webp'),
-              //     radius: 200.0,
-              //   ),
-              // ],
-              image: 'assets/images/Fahim.webp',
-              title: 'Fahim Shahriar',
-              description: '(Description Here)',
-              //image: 'assets/images/Fahim.webp',
+            // HomescreenCard(
+            //   additionalWidget: CircleAvatar(
+            //     backgroundImage: AssetImage('assets/images/Fahim.webp'),
+            //     radius: 200.0,
+            //   ),
+
+            //   title: 'Fahim Shahriar',
+            //   description: '(Description Here)',
+            //   nextPage: TestNextPage(),
+            //   buttonText: 'Download CV',
+            // ),
+            NameCard(),
+            SizedBox(height: 5.0),
+            HomescreenCardReverse(
+              title: 'Skills',
+              description: 'Test',
               nextPage: TestNextPage(),
-              buttonText: 'Download CV',
+              buttonText: 'yew',
             ),
           ],
         ),

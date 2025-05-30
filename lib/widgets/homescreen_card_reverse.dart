@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomescreenCard extends StatelessWidget {
-  const HomescreenCard({
+class HomescreenCardReverse extends StatelessWidget {
+  const HomescreenCardReverse({
     super.key,
     required this.title,
     required this.description,
@@ -23,8 +23,6 @@ class HomescreenCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/images/Fahim.webp', scale: 5.0,),
-          Expanded(child: SizedBox()),
           Flexible(
             child: Column(
               children: [
@@ -42,6 +40,8 @@ class HomescreenCard extends StatelessWidget {
               ],
             ),
           ),
+          Expanded(child: SizedBox()),
+          Image.asset('assets/images/Fahim.webp', scale: 5.0),
         ],
       ),
     );
