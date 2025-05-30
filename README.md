@@ -1,16 +1,6 @@
-# cv_website
+# Portfolio Website
+My personal website, built from scratch with Flutter.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# All rights reserved.
+## You may not copy, distribute, modify, or use this code for any purpose without explicit permission from the author.
+© Fahim Shahriar 2025
