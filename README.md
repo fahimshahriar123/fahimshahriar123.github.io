@@ -1,5 +1,6 @@
 # Portfolio Website
-
 My personal website, built from scratch with Flutter.
 
-## This repo is not for cloning/forking. You can use this project as a reference, but any kind of cloning is strictly probited. The author reserves all the rights.
+# All rights reserved.
+## You may not copy, distribute, modify, or use this code for any purpose without explicit permission from the author.
+© Fahim Shahriar 2025
