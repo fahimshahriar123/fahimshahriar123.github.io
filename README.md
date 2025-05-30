@@ -1,4 +1,4 @@
-# CV Website
+# Portfolio Website
 
 My personal website, built from scratch with Flutter.
 
