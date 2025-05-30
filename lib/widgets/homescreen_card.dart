@@ -25,30 +25,35 @@ class HomescreenCard extends StatelessWidget {
     return Card(
       elevation: 10.0,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           //if (additionalWidget != null) ...additionalWidget!,
           CircleAvatar(
             backgroundImage: AssetImage(image!),
             radius: 200.0,
           ),
-          Column(
-            children: [
-              Text(title),
-              Text(description),
-              if (button != null)
-                button!
-              else if (nextPage != null)
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => nextPage!),
-                    );
-                  },
-                  child: Text(buttonText!),
-                ),
-            ],
+          Expanded(child: SizedBox()),
+          Flexible(
+            child: Column(
+                children: [
+                  Text(title),
+                  Text(description),
+                  if (button != null)
+                    button!
+                  else if (nextPage != null)
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => nextPage!),
+                        );
+                      },
+                      child: Text(buttonText!),
+                    ),
+                ],
+              ),
           ),
+          
         ],
       ),
     );
