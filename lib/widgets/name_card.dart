@@ -1,55 +1,60 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cv_website/pages/test_next_page.dart';
 import 'package:flutter/material.dart';
-
-const colorizeColors = [Colors.purple, Colors.blue, Colors.yellow, Colors.red];
-
-const colorizeTextStyle = TextStyle(
-  fontSize: 50.0,
-  fontWeight: FontWeight.bold,
-); //Need to change the font
 
 class NameCard extends StatelessWidget {
   const NameCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 10.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleAvatar(
-            backgroundImage: AssetImage('assets/images/Fahim.webp'),
-            radius: 150.0,
-          ),
-          Expanded(child: SizedBox()),
-          Flexible(
-            child: Column(
-              children: [
-                AnimatedTextKit(
-                  animatedTexts: [
-                    ColorizeAnimatedText(
-                      'Fahim Shahriar',
-                      textStyle: colorizeTextStyle,
-                      colors: colorizeColors,
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 30.0),
+      child: Card(
+        elevation: 5.0,
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                backgroundImage: AssetImage('assets/images/Fahim.webp'),
+                radius: 150.0,
+              ),
+              SizedBox(width: 250.0),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Fahim Shahriar',
+                    style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Student',
+                    style: TextStyle(fontSize: 25.0, color: Colors.grey),
+                  ),
+                  Text('Learner (Need to edit)'),
+                  SizedBox(height: 15.0),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return TestNextPage();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Download CV',
+                      style: TextStyle(color: Colors.white),
                     ),
-                  ],
-                ),
-                Text('(Description Here)'),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => TestNextPage()),
-                    );
-                  },
-                  child: Text('Download CV'),
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
