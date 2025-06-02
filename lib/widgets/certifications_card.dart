@@ -1,7 +1,8 @@
+import 'package:cv_website/widgets/individual_certification_card.dart';
 import 'package:flutter/material.dart';
 
-class AboutMeCard extends StatelessWidget {
-  const AboutMeCard({super.key});
+class CertificationsCard extends StatelessWidget {
+  const CertificationsCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,16 +24,18 @@ class AboutMeCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 5.0),
                 child: Text(
-                  'About Me',
+                  'Certifications',
                   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              Row(
+              Wrap(
                 children: [
-                  Expanded(
-                    child: Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                    ),
+                  IndividualCertificationCard(
+                    image: 'assets/images/cf_digitalMarketing.webp',
+                    certification: 'CCNA: Introduction to Networks',
+                    certificationName:
+                        'From understanding network architectures and protocols to mastering IP addressing and Ethernet fundamentals, completeing this course helped me develop foundational knowledge and build your networking basics. This course also includes interactive labs and real-world scenarios to help gain practical experience in building local area networks (LANs), implementing network security measures, and configuring routers and switches.',
+                    scale: 1.0,
                   ),
 
                   // The following stack is for the image on each card and for the shadow.
