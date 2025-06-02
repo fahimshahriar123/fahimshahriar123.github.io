@@ -15,17 +15,44 @@ class NameCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
-                backgroundImage: AssetImage('assets/images/Fahim.webp'),
-                radius: 150.0,
+              // CircleAvatar(
+              //   backgroundImage: AssetImage('assets/images/Fahim.webp'),
+              //   radius: 150.0,
+              // ),
+              Stack(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 80.0,
+                          offset: Offset(100, 100),
+                          color: Colors.black87,
+                          //spreadRadius: 20.0,
+                        ),
+                      ],
+                    ),
+                  ),
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/Fahim.webp'),
+                    radius: 150.0,
+                  ),
+                ],
               ),
+
               SizedBox(width: 250.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Fahim Shahriar',
-                    style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Text(
                     'Student',
@@ -34,7 +61,9 @@ class NameCard extends StatelessWidget {
                   Text('Learner (Need to edit)'),
                   SizedBox(height: 15.0),
                   ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                    ),
                     onPressed: () {
                       Navigator.push(
                         context,

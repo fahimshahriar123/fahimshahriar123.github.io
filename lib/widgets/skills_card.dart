@@ -15,10 +15,7 @@ class SkillsCard extends StatelessWidget {
             children: [
               Text(
                 'Skills',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
               ),
             ],
           ),
