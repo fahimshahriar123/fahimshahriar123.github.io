@@ -5,13 +5,13 @@ class IndividualSkillsCard extends StatelessWidget {
     super.key,
     required this.image,
     required this.skill,
-    required this.skillName,
+    this.skillName,
     required this.scale,
   });
 
   final String image;
   final String skill;
-  final String skillName;
+  final String? skillName;
   final double scale;
 
   @override
@@ -34,12 +34,14 @@ class IndividualSkillsCard extends StatelessWidget {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         skill,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Text(skillName, style: TextStyle(fontSize: 10.0)),
+                      if (skillName != null)
+                      Text(skillName!, style: TextStyle(fontSize: 10.0)),
                     ],
                   ),
                 ],

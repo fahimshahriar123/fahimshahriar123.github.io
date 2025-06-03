@@ -101,7 +101,6 @@ class SkillsCard extends StatelessWidget {
                         IndividualSkillsCard(
                           image: 'assets/images/logo_digitalMarkteing.webp',
                           skill: 'Digital Marketing',
-                          skillName: 'Dm',
                           scale: 5.0,
                         ),
                       ],
