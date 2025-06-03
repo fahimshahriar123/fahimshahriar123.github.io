@@ -64,7 +64,7 @@ class NameCard extends StatelessWidget {
                     'Student',
                     style: TextStyle(fontSize: 25.0, color: Colors.grey),
                   ),
-                  Text('Learner (Need to edit)'),
+                  Text('(Address)'),
                   SizedBox(height: 15.0),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(

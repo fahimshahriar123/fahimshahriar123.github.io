@@ -1,5 +1,7 @@
 import 'package:cv_website/widgets/about_me_card.dart';
 import 'package:cv_website/widgets/certifications_card.dart';
+import 'package:cv_website/widgets/education_card.dart';
+import 'package:cv_website/widgets/experience_card.dart';
 import 'package:cv_website/widgets/name_card.dart';
 import 'package:cv_website/widgets/skills_card.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +18,12 @@ class LandingPage extends StatelessWidget {
           children: [
             NameCard(),
             AboutMeCard(),
+            EducationCard(),
             SkillsCard(),
+            ExperienceCard(),
             CertificationsCard(),
           ],
-        )
+        ),
       ),
     );
   }
