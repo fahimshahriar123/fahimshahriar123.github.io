@@ -62,7 +62,6 @@ class ExperienceCard extends StatelessWidget {
                                     ),
                                   ),
                                   Text('Community Manager'),
-                                  Text('Project: Annihilation'),
                                 ],
                               ),
                             ),
@@ -90,7 +89,6 @@ class ExperienceCard extends StatelessWidget {
                                     ),
                                   ),
                                   Text('Game Developer'),
-                                  Text('Project: SkidVR'),
                                 ],
                               ),
                             ),
@@ -137,16 +135,16 @@ class ExperienceCard extends StatelessWidget {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              blurRadius: 80.0,
-                              offset: Offset(200, 100),
+                              blurRadius: 100.0,
+                              offset: Offset(300, 100),
                               color: Colors.black87,
-                              spreadRadius: 30.0,
+                              spreadRadius: 1.0,
                             ),
                           ],
                         ),
                       ),
                       Image.asset(
-                        'assets/images/icon_workExperience.png',
+                        'assets/images/icons/icon_workExperience.webp',
                         scale: 4.0,
                       ),
                     ],

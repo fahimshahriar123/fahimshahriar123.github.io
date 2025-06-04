@@ -1,4 +1,4 @@
-import 'package:cv_website/widgets/individual_skills_card.dart';
+import 'package:cv_website/widgets/individual%20cards/ind_skills_card.dart';
 import 'package:flutter/material.dart';
 
 class SkillsCard extends StatelessWidget {
@@ -50,56 +50,56 @@ class SkillsCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Image.asset('assets/images/logo_skills.webp', scale: 4.0),
+                      Image.asset('assets/images/icons/icon_skills.webp', scale: 4.0),
                     ],
                   ),
                   Expanded(
                     child: Wrap(
                       children: [
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_unrealEngine.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_unrealEngine.webp',
                           skill: 'Unreal Engine 5',
                           skillName: 'Game Development',
                           scale: 15.0,
                         ),
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_flutter.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_flutter.webp',
                           skill: 'Flutter',
                           skillName: 'App Development',
                           scale: 5.0,
                         ),
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_blender.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_blender.webp',
                           skill: 'Blender',
                           skillName: '3D Modelling',
                           scale: 5.0,
                         ),
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_canva.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_canva.webp',
                           skill: 'Canva',
                           skillName: 'Graphics Designing',
                           scale: 5.0,
                         ),
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_kdenlive.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_kdenlive.webp',
                           skill: 'Kdenlive',
                           skillName: 'Video Editing',
                           scale: 5.0,
                         ),
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_photoshop.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_photoshop.webp',
                           skill: 'Adobe Photoshop',
                           skillName: 'Photo Editing and Graphics Designing',
                           scale: 5.0,
                         ),
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_ubuntu.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_ubuntu.webp',
                           skill: 'GNU/Linux: Ubuntu',
                           skillName: 'Linux Administration',
                           scale: 5.0,
                         ),
-                        IndividualSkillsCard(
-                          image: 'assets/images/logo_digitalMarkteing.webp',
+                        IndSkillsCard(
+                          image: 'assets/images/logos/logo_digitalMarkteing.webp',
                           skill: 'Digital Marketing',
                           scale: 5.0,
                         ),

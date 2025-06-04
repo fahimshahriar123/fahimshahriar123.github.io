@@ -54,7 +54,7 @@ class AboutMeCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Image.asset('assets/images/aboutMeIcon.webp', scale: 4.0),
+                      Image.asset('assets/images/icons/icon_aboutMe.webp', scale: 4.0),
                     ],
                   ),
                 ],

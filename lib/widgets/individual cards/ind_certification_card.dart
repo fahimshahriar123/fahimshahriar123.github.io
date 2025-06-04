@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class IndividualCertificationCard extends StatelessWidget {
-  const IndividualCertificationCard({
+class IndCertificationCard extends StatelessWidget {
+  const IndCertificationCard({
     super.key,
     required this.image,
     required this.certification,
@@ -37,7 +37,7 @@ class IndividualCertificationCard extends StatelessWidget {
                 children: [
                   for (var i in image)
                   Padding(
-                    padding: const EdgeInsets.only(right: 8.0, bottom: 8.0),
+                    padding: const EdgeInsets.only(right: 12.0, bottom: 8.0),
                     child: Image.asset(i, scale: scale),
                   ),
                 ],

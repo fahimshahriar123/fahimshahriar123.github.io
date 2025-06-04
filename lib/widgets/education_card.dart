@@ -1,4 +1,4 @@
-import 'package:cv_website/widgets/individual_education_card.dart';
+import 'package:cv_website/widgets/individual%20cards/ind_education_card.dart';
 import 'package:flutter/material.dart';
 
 class EducationCard extends StatelessWidget {
@@ -31,21 +31,21 @@ class EducationCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    IndividualEducationCard(
+                    IndEducationCard(
                       degreeTitle: 'Bachelor of Science',
                       subject: 'Computer Science and Engineering',
                       instituteName: 'United International University',
                       address: 'Dhaka, Bangladesh',
                       passingYear: '2028 (Expected)',
                     ),
-                    IndividualEducationCard(
+                    IndEducationCard(
                       degreeTitle: 'Higher Secondary Certificate',
                       subject: 'Science',
                       instituteName: 'Chattogram Port College',
                       address: 'Chattogram, Bangladesh',
                       passingYear: '2022',
                     ),
-                    IndividualEducationCard(
+                    IndEducationCard(
                       degreeTitle: 'Secondary School Certificate',
                       subject: 'Science',
                       instituteName: 'Govt. Muslim High School',

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class IndividualSkillsCard extends StatelessWidget {
-  const IndividualSkillsCard({
+class IndSkillsCard extends StatelessWidget {
+  const IndSkillsCard({
     super.key,
     required this.image,
     required this.skill,

@@ -43,7 +43,7 @@ class NameCard extends StatelessWidget {
                     ),
                   ),
                   CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/Fahim.webp'),
+                    backgroundImage: AssetImage('images/profile_picture.webp'),
                     radius: 150.0,
                   ),
                 ],
