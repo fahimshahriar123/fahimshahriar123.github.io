@@ -22,14 +22,7 @@ class IndProgrammingLanguagesCard extends StatelessWidget {
           elevation: 5.0,
           child: Padding(
             padding: const EdgeInsets.all(30.0),  //This is for the padding inside the card around the elements
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: Image.asset(image, scale: scale),
-                ),
-              ],
-            ),
+            child: Image.asset(image, scale: scale),
           ),
         ),
       ),

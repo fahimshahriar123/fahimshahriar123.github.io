@@ -1,4 +1,4 @@
-import 'package:cv_website/pages/landing_page.dart';
+import 'package:cv_website/desktop/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Fahim Shahriar Portfolio',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => LandingPage(),
       },
-      debugShowCheckedModeBanner: false,
     );
   }
 }

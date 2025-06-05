@@ -18,7 +18,6 @@ class SocialIcons extends StatelessWidget {
           onPressed: () async {
             await launchUrl(
               Uri.parse(link),
-              mode: LaunchMode.externalNonBrowserApplication,
             );
           },
           icon: FaIcon(icon));

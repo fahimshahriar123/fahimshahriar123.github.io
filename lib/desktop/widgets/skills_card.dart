@@ -1,4 +1,4 @@
-import 'package:cv_website/widgets/individual%20cards/ind_skills_card.dart';
+import 'package:cv_website/desktop/widgets/individual%20cards/ind_skills_card.dart';
 import 'package:flutter/material.dart';
 
 class SkillsCard extends StatelessWidget {

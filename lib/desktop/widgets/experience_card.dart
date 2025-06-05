@@ -23,8 +23,9 @@ class ExperienceCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(
             30.0,
-          ),  //This is for the padding inside the card around the elements
-          child: Column(  //Step 1
+          ), //This is for the padding inside the card around the elements
+          child: Column(
+            //Step 1
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -35,12 +36,15 @@ class ExperienceCard extends StatelessWidget {
                   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              Row(  //Step 3
+              Row(
+                //Step 3
                 children: [
                   Expanded(
-                    child: Column(  //Step2
+                    child: Column(
+                      //Step2
                       children: [
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CircleLine(),
                             Padding(
@@ -68,6 +72,7 @@ class ExperienceCard extends StatelessWidget {
                           ],
                         ),
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CircleLine(),
                             Padding(
@@ -95,6 +100,7 @@ class ExperienceCard extends StatelessWidget {
                           ],
                         ),
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CircleLine(),
                             Padding(
@@ -138,7 +144,6 @@ class ExperienceCard extends StatelessWidget {
                               blurRadius: 100.0,
                               offset: Offset(300, 100),
                               color: Colors.black87,
-                              spreadRadius: 1.0,
                             ),
                           ],
                         ),

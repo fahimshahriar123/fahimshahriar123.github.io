@@ -1,4 +1,4 @@
-import 'package:cv_website/widgets/social_icons.dart';
+import 'package:cv_website/desktop/widgets/social_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

@@ -1,4 +1,4 @@
-import 'package:cv_website/widgets/individual%20cards/ind_programming_languages_card.dart';
+import 'package:cv_website/desktop/widgets/individual%20cards/ind_programming_languages_card.dart';
 import 'package:flutter/material.dart';
 
 class ProgrammingLanguagesCard extends StatelessWidget {
@@ -63,7 +63,6 @@ class ProgrammingLanguagesCard extends StatelessWidget {
                               blurRadius: 100.0,
                               offset: Offset(300, 100),
                               color: Colors.black87,
-                              spreadRadius: 1.0,
                             ),
                           ],
                         ),

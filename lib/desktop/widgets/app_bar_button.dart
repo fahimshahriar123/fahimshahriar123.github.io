@@ -1,5 +1,5 @@
-import 'package:cv_website/pages/landing_page.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppBarButton extends StatelessWidget {
   const AppBarButton({
@@ -15,7 +15,7 @@ class AppBarButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.pushNamed(context, pageName);
+        Navigator.pushReplacementNamed(context, pageName);
       },
       child: Text(
           title,
@@ -29,13 +29,18 @@ class AppBarButton extends StatelessWidget {
 }
 
 class AppBarTextButton extends StatelessWidget {
-  const AppBarTextButton({super.key});
+  const AppBarTextButton({super.key, required this.link});
+
+  final String link;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        launchURL();
+      onPressed: () async {
+        await launchUrl(
+              Uri.parse(link),
+              mode: LaunchMode.externalApplication,
+            );
       },
       child:Text(
           'Blogs',
