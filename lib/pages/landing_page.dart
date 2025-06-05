@@ -7,6 +7,7 @@ import 'package:cv_website/widgets/name_card.dart';
 import 'package:cv_website/widgets/programming_languages_card.dart';
 import 'package:cv_website/widgets/skills_card.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -18,8 +19,8 @@ class LandingPage extends StatelessWidget {
         surfaceTintColor: Colors.blue,
         title: Text('Fahim Shahriar'),
         actions: [
-          AppBarButton(pageName: 'home', title: 'Home'),
-          AppBarButton(pageName: 'home', title: 'Test'),
+          AppBarButton(pageName: '/home', title: 'Home'),
+          AppBarTextButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -37,4 +38,11 @@ class LandingPage extends StatelessWidget {
       ),
     );
   }
+}
+
+launchURL() async {
+   final Uri url = Uri.parse('https://fahimshahriar1.medium.com');
+   if (!await launchUrl(url)) {
+        throw Exception('Could not launch $url');
+    }
 }

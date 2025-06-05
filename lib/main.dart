@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       home: LandingPage(),
       routes: {
-        'home': (context) => LandingPage(),
+        '/home': (context) => LandingPage(),
       },
       debugShowCheckedModeBanner: false,
     );

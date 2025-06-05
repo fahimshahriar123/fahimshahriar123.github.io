@@ -1,3 +1,4 @@
+import 'package:cv_website/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 
 class AppBarButton extends StatelessWidget {
@@ -14,22 +15,35 @@ class AppBarButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.pushReplacementNamed(context, pageName);
+        Navigator.pushNamed(context, pageName);
       },
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(color: Colors.blue, width: 3),
-          ),
-        ),
-        child: Text(
+      child: Text(
           title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.black,
           ),
         ),
-      ),
+    );
+  }
+}
+
+class AppBarTextButton extends StatelessWidget {
+  const AppBarTextButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        launchURL();
+      },
+      child:Text(
+          'Blogs',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
     );
   }
 }

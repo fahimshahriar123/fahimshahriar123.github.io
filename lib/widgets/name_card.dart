@@ -1,5 +1,6 @@
-import 'package:cv_website/pages/test_next_page.dart';
+import 'package:cv_website/widgets/social_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NameCard extends StatelessWidget {
   const NameCard({super.key});
@@ -48,8 +49,7 @@ class NameCard extends StatelessWidget {
                   ),
                 ],
               ),
-
-              SizedBox(width: 250.0),
+              Flexible(child: SizedBox(width: 250.0)),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -64,27 +64,51 @@ class NameCard extends StatelessWidget {
                     'Student',
                     style: TextStyle(fontSize: 25.0, color: Colors.grey),
                   ),
-                  Text('(Address)'),
-                  SizedBox(height: 15.0),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return TestNextPage();
-                          },
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Download CV',
-                      style: TextStyle(color: Colors.white),
-                    ),
+                  Text('Dhaka, Bangladesh'),
+                  Row(
+                    children: [
+                      SocialIcons(
+                        link: 'mailto:fahimshahriar188@gmail.com',
+                        icon: FontAwesomeIcons.envelope,
+                      ),
+                      SocialIcons(
+                        link: 'https://www.linkedin.com/in/fahimshahriar1/',
+                        icon: FontAwesomeIcons.linkedin,
+                      ),
+                      SocialIcons(
+                        link: 'https://github.com/fahimshahriar123',
+                        icon: FontAwesomeIcons.github,
+                      ),
+                      SocialIcons(
+                        link: 'https://facebook.com/SulfuricFahim',
+                        icon: FontAwesomeIcons.facebook,
+                      ),
+                      SocialIcons(
+                        link: 'https://x.com/SulfuricFahim',
+                        icon: FontAwesomeIcons.xTwitter,
+                      ),
+                    ],
                   ),
+                  //SizedBox(height: 15.0),
+                  // ElevatedButton(
+                  //   style: ElevatedButton.styleFrom(
+                  //     backgroundColor: Colors.black,
+                  //   ),
+                  //   onPressed: () {
+                  //     Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) {
+                  //           return TestNextPage();
+                  //         },
+                  //       ),
+                  //     );
+                  //   },
+                  //   child: Text(
+                  //     'Download CV',
+                  //     style: TextStyle(color: Colors.white),
+                  //   ),
+                  // ),
                 ],
               ),
             ],
