@@ -1,3 +1,4 @@
+import 'package:cv_website/data/notifiers.dart';
 import 'package:cv_website/desktop/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,14 +12,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Fahim Shahriar Portfolio',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: LandingPage(),
-      routes: {
-        '/home': (context) => LandingPage(),
+    return ValueListenableBuilder(
+      valueListenable: isDarkModeNotifier,
+      builder: (context, value, child) {
+        return MaterialApp(
+          title: 'Fahim Shahriar Portfolio',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.deepPurple,
+              brightness: value ? Brightness.light : Brightness.dark,
+            ),
+          ),
+          home: LandingPage(),
+          routes: {'/home': (context) => LandingPage()},
+        );
       },
     );
   }

@@ -21,7 +21,6 @@ class AppBarButton extends StatelessWidget {
           title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.black,
           ),
         ),
     );
@@ -46,7 +45,6 @@ class AppBarTextButton extends StatelessWidget {
           'Blogs',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.black,
           ),
         ),
     );

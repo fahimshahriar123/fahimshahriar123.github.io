@@ -1,3 +1,4 @@
+import 'package:cv_website/data/notifiers.dart';
 import 'package:cv_website/desktop/widgets/app_bar_button.dart';
 import 'package:cv_website/desktop/widgets/about_me_card.dart';
 import 'package:cv_website/desktop/widgets/certifications_card.dart';
@@ -32,40 +33,52 @@ class _LandingPageState extends State<LandingPage> {
         actions: [
           AppBarButton(pageName: '/home', title: 'Home'),
           AppBarTextButton(link: 'https://fahimshahriar1.medium.com'),
+          IconButton(
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, value, child) {
+                return Icon(value ? Icons.light_mode : Icons.dark_mode);
+              },
+            ),
+          ),
         ],
       ),
-      body: LayoutBuilder(builder: (context, constraints) {
-        if (constraints.maxWidth < 600) {
-          return SingleChildScrollView(
-        child: Column(
-          children: [
-            MNameCard(),
-            MAboutMeCard(),
-            MEducationCard(),
-            MSkillsCard(),
-            MProgrammingLanguagesCard(),
-            MExperienceCard(),
-            MCertificationsCard(),
-          ],
-        ),
-      );
-        }
-        else {
-          return SingleChildScrollView(
-        child: Column(
-          children: [
-            NameCard(),
-            AboutMeCard(),
-            EducationCard(),
-            SkillsCard(),
-            ProgrammingLanguagesCard(),
-            ExperienceCard(),
-            CertificationsCard(),
-          ],
-        ),
-      );
-        }
-      },)
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth < 600) {
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  MNameCard(),
+                  MAboutMeCard(),
+                  MEducationCard(),
+                  MSkillsCard(),
+                  MProgrammingLanguagesCard(),
+                  MExperienceCard(),
+                  MCertificationsCard(),
+                ],
+              ),
+            );
+          } else {
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  NameCard(),
+                  AboutMeCard(),
+                  EducationCard(),
+                  SkillsCard(),
+                  ProgrammingLanguagesCard(),
+                  ExperienceCard(),
+                  CertificationsCard(),
+                ],
+              ),
+            );
+          }
+        },
+      ),
     );
   }
 }

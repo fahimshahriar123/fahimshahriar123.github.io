@@ -89,26 +89,6 @@ class NameCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  //SizedBox(height: 15.0),
-                  // ElevatedButton(
-                  //   style: ElevatedButton.styleFrom(
-                  //     backgroundColor: Colors.black,
-                  //   ),
-                  //   onPressed: () {
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //         builder: (context) {
-                  //           return TestNextPage();
-                  //         },
-                  //       ),
-                  //     );
-                  //   },
-                  //   child: Text(
-                  //     'Download CV',
-                  //     style: TextStyle(color: Colors.white),
-                  //   ),
-                  // ),
                 ],
               ),
             ],

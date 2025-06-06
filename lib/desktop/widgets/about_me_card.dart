@@ -47,9 +47,8 @@ class AboutMeCard extends StatelessWidget {
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 80.0,
-                              offset: Offset(100, 100),
+                              offset: Offset(150, 100),
                               color: Colors.black87,
-                              spreadRadius: 30.0,
                             ),
                           ],
                         ),
