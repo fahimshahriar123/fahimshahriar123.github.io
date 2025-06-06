@@ -1,0 +1,93 @@
+import 'package:cv_website/desktop/widgets/card_icon.dart';
+import 'package:cv_website/desktop/widgets/mouse_hover.dart';
+import 'package:cv_website/desktop/widgets/social_icons.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class NameCard extends StatefulWidget {
+  const NameCard({super.key});
+
+  @override
+  State<NameCard> createState() => _NameCardState();
+}
+
+class _NameCardState extends State<NameCard> {
+  get elevation => null;
+
+  //double _elevation = 5;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+        30.0,
+        0.0,
+        30.0,
+        30.0,
+      ), //This padding is for the outside of the card
+      child: MouseHover(
+        child: Padding(
+          padding: const EdgeInsets.all(
+            30.0,
+          ), //This is for the padding inside the card around the elements
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CardIcon(
+                height: 200,
+                width: 200,
+                blurRadius: 80,
+                offsetX: 100,
+                offsety: 100,
+                coverImage: 'images/profile_picture.webp',
+                coverImageRadius: 150,
+              ),
+              Flexible(child: SizedBox(width: 250.0)),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Fahim Shahriar',
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'Student',
+                    style: TextStyle(fontSize: 25.0, color: Colors.grey),
+                  ),
+                  Text('Dhaka, Bangladesh'),
+                  Row(
+                    children: [
+                      SocialIcons(
+                        link: 'mailto:fahimshahriar188@gmail.com',
+                        icon: FontAwesomeIcons.envelope,
+                      ),
+                      SocialIcons(
+                        link: 'https://www.linkedin.com/in/fahimshahriar1/',
+                        icon: FontAwesomeIcons.linkedin,
+                      ),
+                      SocialIcons(
+                        link: 'https://github.com/fahimshahriar123',
+                        icon: FontAwesomeIcons.github,
+                      ),
+                      SocialIcons(
+                        link: 'https://facebook.com/SulfuricFahim',
+                        icon: FontAwesomeIcons.facebook,
+                      ),
+                      SocialIcons(
+                        link: 'https://x.com/SulfuricFahim',
+                        icon: FontAwesomeIcons.xTwitter,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

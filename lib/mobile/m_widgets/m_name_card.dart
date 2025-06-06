@@ -1,3 +1,4 @@
+import 'package:cv_website/desktop/widgets/card_icon.dart';
 import 'package:cv_website/desktop/widgets/social_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -22,39 +23,19 @@ class MNameCard extends StatelessWidget {
           ), //This is for the padding inside the card around the elements
           child: Column(
             children: [
-              // The following stack is for the image on each card and for the shadow.
-              // Here, I added two elements. 1. A BoxDecoration for the shadow (which needs to be smaller), 2. The image.
-              // Why? Cause normally, the shadow is the same size as the image.
-              Stack(
-                children: [
-                  Container(
-                    height: 200,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 80.0,
-                          offset: Offset(100, 100),
-                          color: Colors.black87,
-                          //spreadRadius: 20.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                  CircleAvatar(
-                    backgroundImage: AssetImage('images/profile_picture.webp'),
-                    radius: 150.0,
-                  ),
-                ],
+              CardIcon(
+                height: 200,
+                width: 200,
+                blurRadius: 80,
+                offsetX: 100,
+                offsety: 100,
+                coverImage: 'images/profile_picture.webp',
+                coverImageRadius: 150,
               ),
               SizedBox(height: 30.0),
               Text(
                 'Fahim Shahriar',
-                style: TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
               ),
               Text(
                 'Student',
@@ -69,21 +50,21 @@ class MNameCard extends StatelessWidget {
                     icon: FontAwesomeIcons.envelope,
                   ),
                   SocialIcons(
-                link: 'https://www.linkedin.com/in/fahimshahriar1/',
-                icon: FontAwesomeIcons.linkedin,
-              ),
-              SocialIcons(
-                link: 'https://github.com/fahimshahriar123',
-                icon: FontAwesomeIcons.github,
-              ),
-              SocialIcons(
-                link: 'https://facebook.com/SulfuricFahim',
-                icon: FontAwesomeIcons.facebook,
-              ),
-              SocialIcons(
-                link: 'https://x.com/SulfuricFahim',
-                icon: FontAwesomeIcons.xTwitter,
-              ),
+                    link: 'https://www.linkedin.com/in/fahimshahriar1/',
+                    icon: FontAwesomeIcons.linkedin,
+                  ),
+                  SocialIcons(
+                    link: 'https://github.com/fahimshahriar123',
+                    icon: FontAwesomeIcons.github,
+                  ),
+                  SocialIcons(
+                    link: 'https://facebook.com/SulfuricFahim',
+                    icon: FontAwesomeIcons.facebook,
+                  ),
+                  SocialIcons(
+                    link: 'https://x.com/SulfuricFahim',
+                    icon: FontAwesomeIcons.xTwitter,
+                  ),
                 ],
               ),
             ],

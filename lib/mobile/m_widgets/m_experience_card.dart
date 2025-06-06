@@ -4,6 +4,8 @@
 //3. Wrapped the column with a row. Elements: Column of step 2 + Image.
 //These steps number are commented out on the specific lines of this file
 
+import 'package:cv_website/desktop/widgets/card_icon.dart';
+import 'package:cv_website/mobile/m_widgets/individual%20cards/m_ind_experience.dart';
 import 'package:flutter/material.dart';
 
 class MExperienceCard extends StatelessWidget {
@@ -36,145 +38,35 @@ class MExperienceCard extends StatelessWidget {
                   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              // The following stack is for the image on each card and for the shadow.
-              // Here, I added two elements. 1. A BoxDecoration for the shadow (which needs to be smaller), 2. The image.
-              // Why? Cause normally, the shadow is the same size as the image.
-              Stack(
-                children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 100.0,
-                          offset: Offset(150, 70),
-                          color: Colors.black87,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/images/icons/icon_workExperience.webp',
-                    scale: 4.0,
-                  ),
-                ],
+              CardIcon(
+                height: 50,
+                width: 50,
+                blurRadius: 80,
+                offsetX: 100,
+                offsety: 150,
+                image: 'assets/images/icons/icon_workExperience.webp',
+                imageScale: 4,
               ),
               SizedBox(height: 30.0),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CircleLine(),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Dec 2019 - Sep 2022',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'Crisis Entertainment Ltd.',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text('Community Manager'),
-                      ],
-                    ),
-                  ),
-                ],
+              MIndExperience(
+                companyName: 'Crisis Entertainment Ltd.',
+                designation: 'Community Manager',
+                timeline: 'Dec 2019 - Sep 2022',
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CircleLine(),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nov 2021 - Sep 2022',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'EXEAIO',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text('Game Developer'),
-                      ],
-                    ),
-                  ),
-                ],
+              MIndExperience(
+                companyName: 'EXEAIO',
+                designation: 'Game Developer',
+                timeline: 'Nov 2021 - Sep 2022',
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CircleLine(),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Apr 2025 - Present',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          'AppLink',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text('Campus Ambassador'),
-                      ],
-                    ),
-                  ),
-                ],
+              MIndExperience(
+                companyName: 'AppLink',
+                designation: 'Campus Ambassador',
+                timeline: 'Apr 2025 - Present',
               ),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class CircleLine extends StatelessWidget {
-  const CircleLine({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Stack(
-          alignment: Alignment.center,
-          children: [
-            //Text('2019', style: TextStyle(fontWeight: FontWeight.bold)),
-            Container(
-              width: 30.0,
-              height: 30.0,
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                shape: BoxShape.circle,
-                //border: Border.all(color: Colors.green, width: 5.0),
-              ),
-            ),
-          ],
-        ),
-        Container(
-          width: 5.0,
-          height: 100.0,
-          decoration: BoxDecoration(color: Colors.amber),
-        ),
-      ],
     );
   }
 }

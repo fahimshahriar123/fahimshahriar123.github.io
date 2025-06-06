@@ -1,3 +1,4 @@
+import 'package:cv_website/desktop/widgets/card_icon.dart';
 import 'package:cv_website/mobile/m_widgets/individual%20cards/m_ind_programming_languages_card.dart';
 import 'package:flutter/material.dart';
 
@@ -28,26 +29,14 @@ class MProgrammingLanguagesCard extends StatelessWidget {
                   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              Stack(
-                children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 100.0,
-                          offset: Offset(150, 70),
-                          color: Colors.black87,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/images/icons/icon_coding.webp',
-                    scale: 4.0,
-                  ),
-                ],
+              CardIcon(
+                height: 100,
+                width: 100,
+                blurRadius: 100,
+                offsetX: 150,
+                offsety: 70,
+                image: 'assets/images/icons/icon_coding.webp',
+                imageScale: 4.0,
               ),
               SizedBox(height: 30.0),
               MIndProgrammingLanguagesCard(

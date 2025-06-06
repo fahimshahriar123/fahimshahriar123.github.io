@@ -1,9 +1,15 @@
 import 'package:cv_website/desktop/widgets/card_icon.dart';
+import 'package:cv_website/desktop/widgets/mouse_hover.dart';
 import 'package:flutter/material.dart';
 
-class MAboutMeCard extends StatelessWidget {
-  const MAboutMeCard({super.key});
+class AboutMeCard extends StatefulWidget {
+  const AboutMeCard({super.key});
 
+  @override
+  State<AboutMeCard> createState() => _AboutMeCardState();
+}
+
+class _AboutMeCardState extends State<AboutMeCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,8 +19,7 @@ class MAboutMeCard extends StatelessWidget {
         30.0,
         30.0,
       ), //This padding is for the outside of the card
-      child: Card(
-        elevation: 5.0,
+      child: MouseHover(
         child: Padding(
           padding: const EdgeInsets.all(
             30.0,
@@ -28,18 +33,11 @@ class MAboutMeCard extends StatelessWidget {
                   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              CardIcon(
-                height: 100,
-                width: 100,
-                blurRadius: 80,
-                offsetX: 150,
-                offsety: 100,
-                image: 'assets/images/icons/icon_aboutMe.webp',
-                imageScale: 4,
-              ),
-              SizedBox(height: 30.0),
-              Text(
-                '''I was born in Bangladesh, grew up in Chattogram. Currently, I am staying in Dhaka for educational purpose.
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      '''I was born in Bangladesh, grew up in Chattogram. Currently, I am staying in Dhaka for educational purpose.
 
 I was extremely interested to learn game development and have my own game published since my childhood. At 8th grade, I got an angle-like human who guided me to start working on my dream. I started learning C programming.
 
@@ -50,6 +48,18 @@ Currently I am focusing on my study, skill development and networking, as I beli
 I am not a good student though, but I believe that I can do anything that I need to do. Thus I have a strong interest in research. Even though I am an undergrad student, I am preparing myself for pursuing a PhD degree from abroad. I know it is a tough journey, but my passion drives me everyday to be a better version of myself and achieve the goal that I wish for.
 
 I believe that Bangladesh has gifted me a lot of things, and I have some duties for Bangladesh. Thus, I need to contribute something to the country. I am getting prepared everyday for that ultimate day and I will be there sometime, in sha Allah!''',
+                    ),
+                  ),
+                  CardIcon(
+                    height: 100,
+                    width: 100,
+                    blurRadius: 80,
+                    offsetX: 150,
+                    offsety: 100,
+                    image: 'assets/images/icons/icon_aboutMe.webp',
+                    imageScale: 4,
+                  ),
+                ],
               ),
             ],
           ),

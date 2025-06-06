@@ -30,20 +30,21 @@ class MCertificationsCard extends StatelessWidget {
               ),
               MIndCertificationCard(
                 image: [
-                  'assets/images/certificates/cf_ccnaItn.webp',
-                  'assets/images/certificates/cf_ccnaItn_uiu.webp',
+                  'assets/images/certificates/academic/cf_ccnaItn.webp',
+                  'assets/images/certificates//academic/cf_ccnaItn_uiu.webp',
                 ],
                 certification: 'CCNA: Introduction to Networks',
                 certificationName:
                     'From understanding network architectures and protocols to mastering IP addressing and Ethernet fundamentals, completeing this course helped me develop foundational knowledge and build your networking basics. This course also includes interactive labs and real-world scenarios to help gain practical experience in building local area networks (LANs), implementing network security measures, and configuring routers and switches.',
-                scale: 1, //need to remove the scale
+                buttonText: 'View Badge',
+                buttonLink:
+                    'https://www.credly.com/badges/c87b73e7-7cf2-49a1-8d91-7332f2c623d5/public_url',
               ),
               MIndCertificationCard(
-                image: ['assets/images/certificates/cf_digitalMarketing.webp'],
+                image: ['assets/images/certificates/academic/cf_digitalMarketing.webp'],
                 certification: 'Futurenation: Digital Marketing',
                 certificationName:
                     'This course provided me comprehensive training on essential marketing strategies and tools used in the digital world. It covers key areas such as SEO, social media marketing, content creation, email, and data analytics. The course equiped me with the skills to effectively reach and engage online audiences.',
-                scale: 1,
               ),
             ],
           ),

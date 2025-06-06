@@ -1,3 +1,4 @@
+import 'package:cv_website/desktop/widgets/card_icon.dart';
 import 'package:cv_website/mobile/m_widgets/individual%20cards/m_ind_skills_card.dart';
 import 'package:flutter/material.dart';
 
@@ -28,28 +29,14 @@ class MSkillsCard extends StatelessWidget {
                   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              Stack(
-                children: [
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 80.0,
-                          offset: Offset(100, 150),
-                          color: Colors.black54,
-                          spreadRadius: 20.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/images/icons/icon_skills.webp',
-                    scale: 4.0,
-                  ),
-                ],
+              CardIcon(
+                height: 100,
+                width: 100,
+                blurRadius: 100,
+                offsetX: 150,
+                offsety: 70,
+                image: 'assets/images/icons/icon_skills.webp',
+                imageScale: 4.0,
               ),
               SizedBox(height: 30.0),
               MIndSkillsCard(

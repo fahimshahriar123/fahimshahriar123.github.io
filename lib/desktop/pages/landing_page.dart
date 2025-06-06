@@ -1,14 +1,17 @@
 import 'package:cv_website/data/methods.dart';
 import 'package:cv_website/desktop/widgets/app_bar_button.dart';
-import 'package:cv_website/desktop/widgets/about_me_card.dart';
-import 'package:cv_website/desktop/widgets/certifications_card.dart';
-import 'package:cv_website/desktop/widgets/education_card.dart';
-import 'package:cv_website/desktop/widgets/experience_card.dart';
-import 'package:cv_website/desktop/widgets/name_card.dart';
-import 'package:cv_website/desktop/widgets/programming_languages_card.dart';
-import 'package:cv_website/desktop/widgets/skills_card.dart';
+import 'package:cv_website/desktop/widgets/cards/about_me_card.dart';
+import 'package:cv_website/desktop/widgets/cards/certifications_card.dart';
+import 'package:cv_website/desktop/widgets/cards/eca_card.dart';
+import 'package:cv_website/desktop/widgets/cards/education_card.dart';
+import 'package:cv_website/desktop/widgets/cards/experience_card.dart';
+import 'package:cv_website/desktop/widgets/cards/footer.dart';
+import 'package:cv_website/desktop/widgets/cards/name_card.dart';
+import 'package:cv_website/desktop/widgets/cards/programming_languages_card.dart';
+import 'package:cv_website/desktop/widgets/cards/skills_card.dart';
 import 'package:cv_website/mobile/m_widgets/m_about_me_card.dart';
 import 'package:cv_website/mobile/m_widgets/m_certifications_card.dart';
+import 'package:cv_website/mobile/m_widgets/m_eca_card.dart';
 import 'package:cv_website/mobile/m_widgets/m_education_card.dart';
 import 'package:cv_website/mobile/m_widgets/m_experience_card.dart';
 import 'package:cv_website/mobile/m_widgets/m_name_card.dart';
@@ -59,6 +62,8 @@ class _LandingPageState extends State<LandingPage> {
                   MProgrammingLanguagesCard(),
                   MExperienceCard(),
                   MCertificationsCard(),
+                  MEcaCard(),
+                  Footer(),
                 ],
               ),
             );
@@ -73,6 +78,8 @@ class _LandingPageState extends State<LandingPage> {
                   ProgrammingLanguagesCard(),
                   ExperienceCard(),
                   CertificationsCard(),
+                  EcaCard(),
+                  Footer(),
                 ],
               ),
             );

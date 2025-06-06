@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class IndCertificationCard extends StatelessWidget {
   const IndCertificationCard({
     super.key,
     required this.image,
     required this.certification,
-    required this.certificationName,
+    required this.description,
     required this.scale,
+    this.buttonText,
+    this.buttonLink,
   });
 
   final List<String> image;
   final String certification;
-  final String certificationName;
+  final String description;
   final double scale;
+  final String? buttonText;
+  final String? buttonLink;
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +36,14 @@ class IndCertificationCard extends StatelessWidget {
             30.0,
           ), //This is for the padding inside the card around the elements
           child: Row(
-            //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 children: [
                   for (var i in image)
-                  Padding(
-                    padding: const EdgeInsets.only(right: 12.0, bottom: 8.0),
-                    child: Image.asset(i, scale: scale),
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 12.0, bottom: 8.0),
+                      child: Image.asset(i, scale: scale),
+                    ),
                 ],
               ),
               Expanded(
@@ -54,7 +58,18 @@ class IndCertificationCard extends StatelessWidget {
                         fontSize: 18.0,
                       ),
                     ),
-                    Text(certificationName, style: TextStyle(fontSize: 15.0)),
+                    Text(description, style: TextStyle(fontSize: 15.0)),
+                    SizedBox(height: 18),
+                    if (buttonText != null)
+                      ElevatedButton(
+                        onPressed: () async {
+                          await launchUrl(Uri.parse(buttonLink!));
+                        },
+                        child: Text(
+                          buttonText!,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
                   ],
                 ),
               ),
