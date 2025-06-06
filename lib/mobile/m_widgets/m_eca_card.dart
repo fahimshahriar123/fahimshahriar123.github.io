@@ -1,6 +1,5 @@
 import 'package:cv_website/desktop/pages/eca_page.dart';
 import 'package:cv_website/desktop/widgets/individual%20cards/ind_eca_card.dart';
-import 'package:cv_website/desktop/widgets/mouse_hover.dart';
 import 'package:flutter/material.dart';
 
 class MEcaCard extends StatefulWidget {
@@ -20,7 +19,8 @@ class _MEcaCardState extends State<MEcaCard> {
         30.0,
         30.0,
       ), //This padding is for the outside of the card
-      child: MouseHover(
+      child: Card(
+        elevation: 5,
         child: Padding(
           padding: const EdgeInsets.all(
             5.0,
@@ -52,7 +52,7 @@ class _MEcaCardState extends State<MEcaCard> {
                     ),
                   );
                 },
-                child: Text('Explore All'),
+                child: Text('Explore All', style: TextStyle(fontWeight: FontWeight.bold),),
               ),
             ],
           ),

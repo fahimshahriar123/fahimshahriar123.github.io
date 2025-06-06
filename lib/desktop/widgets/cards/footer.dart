@@ -11,6 +11,7 @@ class Footer extends StatelessWidget {
       child: Column(
         children: [
           Text.rich(
+            textAlign: TextAlign.center,
             TextSpan(
               children: [
                 TextSpan(text: 'Made with ', style: TextStyle(fontSize: 18)),
@@ -28,6 +29,7 @@ class Footer extends StatelessWidget {
             ),
           ),
           Text.rich(
+            textAlign: TextAlign.center,
             TextSpan(
               children: [
                 TextSpan(text: 'Source code is available '),
