@@ -39,7 +39,7 @@ class _NameCardState extends State<NameCard> {
                 blurRadius: 80,
                 offsetX: 100,
                 offsety: 100,
-                coverImage: 'images/profile_picture.webp',
+                coverImage: 'assets/images/profile_picture.webp',
                 coverImageRadius: 150,
               ),
               Flexible(child: SizedBox(width: 250.0)),

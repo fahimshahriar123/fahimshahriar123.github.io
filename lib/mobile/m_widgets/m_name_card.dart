@@ -29,7 +29,7 @@ class MNameCard extends StatelessWidget {
                 blurRadius: 80,
                 offsetX: 100,
                 offsety: 100,
-                coverImage: 'images/profile_picture.webp',
+                coverImage: 'assets/images/profile_picture.webp',
                 coverImageRadius: 150,
               ),
               SizedBox(height: 30.0),
