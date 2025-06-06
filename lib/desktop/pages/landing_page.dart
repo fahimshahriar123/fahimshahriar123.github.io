@@ -1,4 +1,4 @@
-import 'package:cv_website/data/notifiers.dart';
+import 'package:cv_website/data/methods.dart';
 import 'package:cv_website/desktop/widgets/app_bar_button.dart';
 import 'package:cv_website/desktop/widgets/about_me_card.dart';
 import 'package:cv_website/desktop/widgets/certifications_card.dart';

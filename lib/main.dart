@@ -1,4 +1,4 @@
-import 'package:cv_website/data/notifiers.dart';
+import 'package:cv_website/data/methods.dart';
 import 'package:cv_website/desktop/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 

@@ -6,8 +6,15 @@
 
 import 'package:flutter/material.dart';
 
-class ExperienceCard extends StatelessWidget {
+class ExperienceCard extends StatefulWidget {
   const ExperienceCard({super.key});
+
+  @override
+  State<ExperienceCard> createState() => _ExperienceCardState();
+}
+
+class _ExperienceCardState extends State<ExperienceCard> {
+  double _elevation = 5;
 
   @override
   Widget build(BuildContext context) {
@@ -18,148 +25,129 @@ class ExperienceCard extends StatelessWidget {
         30.0,
         30.0,
       ), //This padding is for the outside of the card
-      child: Card(
-        elevation: 5.0,
-        child: Padding(
-          padding: const EdgeInsets.all(
-            30.0,
-          ), //This is for the padding inside the card around the elements
-          child: Column(
-            //Step 1
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 5.0),
-                child: Text(
-                  'Experience',
-                  style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+      child: MouseRegion(
+        onEnter: (event) {
+          _elevation = 30.0;
+          setState(() {});
+        },
+        onExit: (event) {
+          _elevation = 5;
+          setState(() {});
+        },
+        child: Card(
+          elevation: _elevation,
+          child: Padding(
+            padding: const EdgeInsets.all(
+              30.0,
+            ), //This is for the padding inside the card around the elements
+            child: Column(
+              //Step 1
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5.0),
+                  child: Text(
+                    'Experience',
+                    style: TextStyle(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-              ),
-              Row(
-                //Step 3
-                children: [
-                  Expanded(
-                    child: Column(
-                      //Step2
+                Row(
+                  //Step 3
+                  children: [
+                    // The following stack is for the image on each card and for the shadow.
+                    // Here, I added two elements. 1. A BoxDecoration for the shadow (which needs to be smaller), 2. The image.
+                    // Why? Cause normally, the shadow is the same size as the image.
+                    Stack(
                       children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CircleLine(),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Dec 2019 - Sep 2022',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Crisis Entertainment Ltd.',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  Text('Community Manager'),
-                                ],
+                        Container(
+                          height: 100,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 100.0,
+                                offset: Offset(300, 100),
+                                color: Colors.black87,
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CircleLine(),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Nov 2021 - Sep 2022',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'EXEAIO',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  Text('Game Developer'),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CircleLine(),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 15.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Apr 2025 - Present',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    'AppLink',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  Text('Campus Ambassador'),
-                                ],
-                              ),
-                            ),
-                          ],
+                        Image.asset(
+                          'assets/images/icons/icon_workExperience.webp',
+                          scale: 4.0,
                         ),
                       ],
                     ),
-                  ),
-                  // The following stack is for the image on each card and for the shadow.
-                  // Here, I added two elements. 1. A BoxDecoration for the shadow (which needs to be smaller), 2. The image.
-                  // Why? Cause normally, the shadow is the same size as the image.
-                  Stack(
-                    children: [
-                      Container(
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 100.0,
-                              offset: Offset(300, 100),
-                              color: Colors.black87,
-                            ),
-                          ],
-                        ),
+                    Expanded(
+                      child: Column(
+                        //Step2
+                        children: [
+                          IndExperience(
+                            companyName: 'Crisis Entertainment Ltd.',
+                            designation: 'Community Manager',
+                            timeline: 'Dec 2019 - Sep 2022',
+                          ),
+                          IndExperience(
+                            companyName: 'EXEAIO',
+                            designation: 'Game Developer',
+                            timeline: 'Nov 2021 - Sep 2022',
+                          ),
+                          IndExperience(
+                            companyName: 'AppLink',
+                            designation: 'Campus Ambassador',
+                            timeline: 'Apr 2025 - Present',
+                          ),
+                        ],
                       ),
-                      Image.asset(
-                        'assets/images/icons/icon_workExperience.webp',
-                        scale: 4.0,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class IndExperience extends StatelessWidget {
+  const IndExperience({
+    super.key,
+    required this.companyName,
+    required this.designation,
+    required this.timeline,
+  });
+
+  final String companyName;
+  final String designation;
+  final String timeline;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        CircleLine(),
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(timeline, style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(
+                companyName,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
+              Text(designation),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
