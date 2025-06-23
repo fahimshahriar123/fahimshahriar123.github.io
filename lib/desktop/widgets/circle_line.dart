@@ -9,7 +9,7 @@ class CircleLine extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 10),
+        SizedBox(height: 5),
         Container(
           width: 15.0,
           height: 15.0,
@@ -18,6 +18,8 @@ class CircleLine extends StatelessWidget {
             shape: BoxShape.circle,
           ),
         ),
+        
+        SizedBox(height: 5),
         Container(
           width: 2.0,
           height: 100.0,

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class LandingPage extends StatelessWidget {
-  const LandingPage({super.key});
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text.rich(
+    return Row(
+      children: [
+        Text.rich(
           TextSpan(
             children: [
               TextSpan(
@@ -18,16 +20,7 @@ class LandingPage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            // AboutMe(),
-            // Resume(),
-            // Skills(),
-          ],
-        ),
-      ),
+      ],
     );
   }
 }

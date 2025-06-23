@@ -1,5 +1,6 @@
 import 'package:cv_website/data/methods.dart';
 import 'package:cv_website/desktop/pages/landing_page.dart';
+import 'package:cv_website/desktop/pages/test_landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,8 +9,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
               brightness: value ? Brightness.light : Brightness.dark,
             ),
           ),
-          home: LandingPage(),
+          home: TestLandingPage(),
           routes: {'/home': (context) => LandingPage()},
         );
       },

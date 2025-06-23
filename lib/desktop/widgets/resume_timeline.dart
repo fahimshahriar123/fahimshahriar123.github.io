@@ -21,29 +21,31 @@ class ResumeTimeline extends StatelessWidget {
         SizedBox(width: 30),
         CircleLine(),
         SizedBox(width: 10),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Card(
-              elevation: 0,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  timeline,
-                  style: TextStyle(
-                    color: Colors.black54,
-                    fontWeight: FontWeight.bold,
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Card(
+                elevation: 0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    timeline,
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              instituteName,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            Text(major, style: TextStyle(color: Colors.blue, fontSize: 18)),
-          ],
+              SizedBox(height: 5),
+              Text(
+                instituteName,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Text(major, style: TextStyle(color: Colors.blue, fontSize: 18)),
+            ],
+          ),
         ),
       ],
     );
