@@ -2,8 +2,8 @@ import 'package:cv_website/desktop/widgets/card_title.dart';
 import 'package:cv_website/desktop/widgets/individual_skills_card.dart';
 import 'package:flutter/material.dart';
 
-class Programming extends StatelessWidget {
-  const Programming({super.key});
+class Certifications extends StatelessWidget {
+  const Certifications({super.key});
 
   static const Map<String, String> imageMap = {
     'Dart': 'assets/images/logos/logo_dart.webp',
