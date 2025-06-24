@@ -1,5 +1,6 @@
 import 'package:cv_website/desktop/widgets/about_me.dart';
 import 'package:cv_website/desktop/widgets/custom_app_bar.dart';
+import 'package:cv_website/desktop/widgets/programming.dart';
 import 'package:cv_website/desktop/widgets/resume.dart';
 import 'package:cv_website/desktop/widgets/skills.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +25,12 @@ class TestLandingPage extends StatelessWidget {
               children: [
                 CustomAppBar(),
                 AboutMe(),
+                SizedBox(height: 100),
                 Resume(),
+                SizedBox(height: 100),
                 Skills(),
+                SizedBox(height: 100),
+                Programming(),
               ],
             ),
           ),

@@ -2,8 +2,8 @@ import 'package:cv_website/desktop/widgets/card_title.dart';
 import 'package:cv_website/desktop/widgets/individual_skills_card.dart';
 import 'package:flutter/material.dart';
 
-class Skills extends StatelessWidget {
-  const Skills({super.key});
+class Programming extends StatelessWidget {
+  const Programming({super.key});
 
   static const Map<String, String> imageMap = {
     'Unreal Engine 5': 'assets/images/logos/logo_unrealEngine.webp',

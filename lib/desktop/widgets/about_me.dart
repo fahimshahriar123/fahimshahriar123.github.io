@@ -65,7 +65,6 @@ class AboutMe extends StatelessWidget {
               ElevatedButton(onPressed: null, child: Text('Download CV')),
             ],
           ),
-          SizedBox(height: 500),
         ],
       ),
     );
