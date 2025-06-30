@@ -14,7 +14,7 @@ class Resume extends StatelessWidget {
         SizedBox(height: 30),
         Row(
           children: [
-            Icon(Icons.school, color: Colors.blue),
+            Icon(Icons.school, color: Color.fromRGBO(0, 125, 236, 1)),
             SizedBox(width: 10),
             Text(
               'Education',
@@ -41,7 +41,7 @@ class Resume extends StatelessWidget {
         SizedBox(height: 30),
         Row(
           children: [
-            Icon(Icons.work, color: Colors.blue),
+            Icon(Icons.work, color: Color.fromRGBO(0, 125, 236, 1)),
             SizedBox(width: 10),
             Text(
               'Experience',

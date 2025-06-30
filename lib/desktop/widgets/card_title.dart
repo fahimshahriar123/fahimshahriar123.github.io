@@ -21,7 +21,7 @@ class CardTitle extends StatelessWidget {
             width: 50.0,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.0),
-              color: Colors.blue,
+              color: Color.fromRGBO(0, 125, 236, 1),
             ),
           ),
         ],

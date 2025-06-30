@@ -5,17 +5,6 @@ import 'package:flutter/material.dart';
 class Skills extends StatelessWidget {
   const Skills({super.key});
 
-  static const Map<String, String> imageMap = {
-    'Unreal Engine 5': 'assets/images/logos/logo_unrealEngine.webp',
-    'Flutter': 'assets/images/logos/logo_flutter.webp',
-    'Blender': 'assets/images/logos/logo_blender.webp',
-    'Canva': 'assets/images/logos/logo_canva.webp',
-    'Kdenlive': 'assets/images/logos/logo_kdenlive.webp',
-    'Adobe Photoshop': 'assets/images/logos/logo_photoshop.webp',
-    'Ubuntu': 'assets/images/logos/logo_ubuntu.webp',
-    'Digital Marketing': 'assets/images/logos/logo_digitalmarketing.webp',
-  };
-
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -34,14 +23,53 @@ class Skills extends StatelessWidget {
             Wrap(
               spacing: spacing,
               runSpacing: spacing,
-              children:
-                  imageMap.entries.map((entry) {
-                    return IndividualSkillsCard(
-                      width: cardWidth,
-                      imageTitle: entry.key,
-                      imagePath: entry.value,
-                    );
-                  }).toList(),
+              children: [
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Unreal Engine 5',
+                  imagePath: 'assets/images/logos/logo_unrealEngine.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Unreal Engine 5',
+                  imagePath: 'assets/images/logos/logo_unrealEngine.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Flutter',
+                  imagePath: 'assets/images/logos/logo_flutter.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Blender',
+                  imagePath: 'assets/images/logos/logo_blender.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Canva',
+                  imagePath: 'assets/images/logos/logo_canva.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Kdenlive',
+                  imagePath: 'assets/images/logos/logo_unrealEngine.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Adobe Photoshop',
+                  imagePath: 'assets/images/logos/logo_kdenlive.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Ubuntu',
+                  imagePath: 'assets/images/logos/logo_ubuntu.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Digital Marketing',
+                  imagePath: 'assets/images/logos/logo_digitalmarketing.webp',
+                ),
+              ],
             ),
           ],
         );

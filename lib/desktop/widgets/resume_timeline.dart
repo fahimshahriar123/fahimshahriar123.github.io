@@ -43,7 +43,7 @@ class ResumeTimeline extends StatelessWidget {
                 instituteName,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              Text(major, style: TextStyle(color: Colors.blue, fontSize: 18)),
+              Text(major, style: TextStyle(color: Color.fromRGBO(0, 125, 236, 1), fontSize: 18)),
             ],
           ),
         ),

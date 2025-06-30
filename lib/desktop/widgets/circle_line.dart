@@ -14,7 +14,7 @@ class CircleLine extends StatelessWidget {
           width: 15.0,
           height: 15.0,
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: Color.fromRGBO(0, 125, 236, 1),
             shape: BoxShape.circle,
           ),
         ),
@@ -23,7 +23,7 @@ class CircleLine extends StatelessWidget {
         Container(
           width: 2.0,
           height: 100.0,
-          decoration: BoxDecoration(color: Colors.blue[100]),
+          decoration: BoxDecoration(color: Color.fromRGBO(0, 125, 236, 1)),
         ),
       ],
     );

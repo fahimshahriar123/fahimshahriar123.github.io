@@ -1,4 +1,5 @@
 import 'package:cv_website/desktop/widgets/about_me.dart';
+import 'package:cv_website/desktop/widgets/certifications.dart';
 import 'package:cv_website/desktop/widgets/custom_app_bar.dart';
 import 'package:cv_website/desktop/widgets/programming.dart';
 import 'package:cv_website/desktop/widgets/resume.dart';
@@ -31,6 +32,8 @@ class TestLandingPage extends StatelessWidget {
                 Skills(),
                 SizedBox(height: 100),
                 Programming(),
+                SizedBox(height: 100),
+                Certifications(),
               ],
             ),
           ),
