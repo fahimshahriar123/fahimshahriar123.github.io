@@ -5,12 +5,6 @@ import 'package:flutter/material.dart';
 class Programming extends StatelessWidget {
   const Programming({super.key});
 
-  static const Map<String, String> imageMap = {
-    'Dart': 'assets/images/logos/logo_dart.webp',
-    'C++': 'assets/images/logos/logo_c++.webp',
-    'C': 'assets/images/logos/logo_c.webp',
-  };
-
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -29,14 +23,23 @@ class Programming extends StatelessWidget {
             Wrap(
               spacing: spacing,
               runSpacing: spacing,
-              children:
-                  imageMap.entries.map((entry) {
-                    return IndividualSkillsCard(
-                      width: cardWidth,
-                      imageTitle: entry.key,
-                      imagePath: entry.value,
-                    );
-                  }).toList(),
+              children: [
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'Dart',
+                  imagePath: 'assets/images/logos/logo_dart.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'C++',
+                  imagePath: 'assets/images/logos/logo_c++.webp',
+                ),
+                IndividualSkillsCard(
+                  width: cardWidth,
+                  imageTitle: 'C',
+                  imagePath: 'assets/images/logos/logo_c.webp',
+                ),
+              ],
             ),
           ],
         );

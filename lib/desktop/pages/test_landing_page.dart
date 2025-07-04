@@ -15,16 +15,17 @@ class TestLandingPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            width: (MediaQuery.sizeOf(context).width) * 0.8,
-            margin: EdgeInsets.only(top: 30),
+            width: (MediaQuery.sizeOf(context).width) > 1300 ? (MediaQuery.sizeOf(context).width) * 0.64 : (MediaQuery.sizeOf(context).width),
+            margin: (MediaQuery.sizeOf(context).width) > 1300 ? EdgeInsets.only(top: 55) : EdgeInsets.only(top: 0),
             padding: EdgeInsets.all(50),
             decoration: BoxDecoration(
               color: Color.fromRGBO(254, 254, 255, 1),
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: (MediaQuery.sizeOf(context).width) > 1300 ? BorderRadius.circular(30) : BorderRadius.circular(0),
             ),
             child: Column(
               children: [
                 CustomAppBar(),
+                SizedBox(height: 100),
                 AboutMe(),
                 SizedBox(height: 100),
                 Resume(),

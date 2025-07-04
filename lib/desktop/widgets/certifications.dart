@@ -28,7 +28,7 @@ class Certifications extends StatelessWidget {
                 IndividualCertificationsCard(
                   width: cardWidth,
                   imageTitle: 'CCNA: Introduction to Networks',
-                  imagePath: 'assets/images/logos/logo_ccnaitn.png',
+                  imagePath: 'assets/images/logos/logo_ccnaitn.webp',
                   issuer: 'CISCO',
                   issueDate: 'September 2024',
                   certificateFilePath: 'assets/images/certificates/academic/certificate-ccnaItn.pdf',
